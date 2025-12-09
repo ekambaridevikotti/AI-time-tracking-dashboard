@@ -1,0 +1,12 @@
+:root{ --bg:#f7f9fc; --card:#ffffff; --accent:#6c63ff; --muted:#667085 }
+*{box-sizing:border-box;font-family:Inter, system-ui, Arial, sans-serif}
+body{margin:0;background:var(--bg);color:#0f172a}
+.container{min-height:100vh;display:grid;place-items:center;padding:24px}
+.card{background:var(--card);padding:24px;border-radius:12px;box-shadow:0 6px 18px rgba(12,18,36,0.06);max-width:420px}
+.auth-card h1{margin:0 0 8px}
+.auth-card p{margin:0 0 16px;color:var(--muted)}
+.auth-card input{display:block;width:100%;padding:10px;margin:8px 0;border-radius:8px;border:1px solid #e6e9ef}
+button{background:var(--accent);color:white;padding:10px 14px;border:none;border-radius:8px;cursor:pointer}
+.google-btn{background:white;color:#111;border:1px solid #e6e9ef}
+.divider{text-align:center;margin:12px 0;color:var(--muted)}
+.muted{display:block;margin-top:12px;color:var(--muted);font-size:13px}

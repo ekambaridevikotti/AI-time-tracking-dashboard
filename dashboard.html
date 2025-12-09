@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>AI Time Tracker — Dashboard</title>
+<link rel="stylesheet" href="css/app.css" />
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+<header class="topbar">
+<h2>AI Time Tracker</h2>
+<div class="top-actions">
+<input id="date-picker" type="date" />
+<button id="signout">Sign out</button>
+</div>
+</header>
+
+
+<main class="grid">
+<section class="card form-card">
+<h3>Add Activity</h3>
+<form id="activity-form">
+<input id="activity-title" placeholder="Activity title (e.g., Study)" required />
+<select id="activity-category">
+<option value="Work">Work</option>
+<option value="Study">Study</option>
+<option value="Sleep">Sleep</option>
+<option value="Exercise">Exercise</option>
+<option value="Entertainment">Entertainment</option>
+<option value="Other">Other</option>
+</select>
+<input id="activity-minutes" type="number" placeholder="Minutes" min="1" required />
+<div class="row-between">
+<button id="add-activity" type="submit">Add</button>
+<div id="remaining">Remaining: 1440 min</div>
+</div>
+</form>
+
+
+<hr />
+
+
+<h4>Activities for selected date</h4>
+<ul id="activities-list"></ul>
+</section>
+
+
+<section class="card analyse-card">
+<h3>Analysis</h3>
+<div id="summary">
+<p>Total minutes: <span id="total-min">0</span></p>
+<p>Activities: <span id="count-act">0</span></p>
+</div>
+<div class="row">
+<button id="analyse-btn" disabled>Analyse</button>
+<a id="view-analytics" class="muted-link" href="#">Open Analytics</a>
+</div>
+</section>
+</main>
+
+
+<script type="module" src="js/activities.js"></script>
+</body>
+</html>
